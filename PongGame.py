@@ -13,8 +13,9 @@ class PongGame:
         self.overtimeCount = 0
 
     def playGame(self):
-        self.teamA.turn()
-        self.teamB.turn()
+        while True:
+            self.teamA.turn()
+            self.teamB.turn()
 
 
 
