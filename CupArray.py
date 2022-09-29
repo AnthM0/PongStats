@@ -327,5 +327,15 @@ class CupArray:
                 return True
             else:
                 return False
+        if name.lower() == "back cup":
+            if self.ncups == 1:
+                self.situation = {"A1": False, "A2": False, "A3": False, "A4": False, "A5": False,
+                                  "A6": False, "A7": False, "A8": False, "A9": False, "A10": False,
+                                  "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
+                                  "B6": False, "B7": False, "B8": False, "B9": True, "B10": False,
+                                  "C1": False, "C2": False, "C3": False}
+                return True
+            else:
+                return False
         return False
 
