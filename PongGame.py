@@ -42,11 +42,12 @@ class PongGame:
                 print(self.playerA1, end=" ")
                 if self.playerA1 != self.playerA2:
                     print("and", self.playerA2, end=" ")
-                print("with", self.teamA_wins, "wins", end="\n\n")
+                print("with", self.teamA_wins, "wins")
                 print(self.playerB1, end=" ")
                 if self.playerB1 != self.playerB2:
                     print("and", self.playerB2, end=" ")
                 print("with", self.teamB_wins, "wins", end="\n\n")
+                break
 
     def playGame(self, first_turn="IDK"):
         self.teamA = Team(self.playerA1, self.playerA2)
@@ -66,10 +67,9 @@ class PongGame:
             turn = input(inputstring)
 
         while (turn == "Team A") or (turn == "Team B"):
-            print()
             # if it is Team A's turn
             if turn == "Team A":
-                print(self.playerA1, end="")
+                print("\n", self.playerA1, end="")
                 if self.playerA1 != self.playerA2:
                     print(" and", self.playerA2, end="")
                 print("\'s Turn")
@@ -116,7 +116,7 @@ class PongGame:
 
             # if it is Team B's turn
             if turn == "Team B":
-                print(self.playerB1, end="")
+                print("\n", self.playerB1, end="")
                 if self.playerB1 != self.playerB2:
                     print(" and", self.playerB2, end="")
                 print("\'s Turn")

@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9981da64-511c-4ddf-83c7-1beaf6aea168" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PongArray.py" beforeDir="false" afterPath="$PROJECT_DIR$/PongArray.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PongGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/PongGame.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664839637485</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added the capability to play series">
+      <created>1664841160613</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664841160613</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -119,32 +124,33 @@
     <MESSAGE value="some updates to mechanics, balls back and fire should work now" />
     <MESSAGE value="everything works? needs playtesting but all should be good" />
     <MESSAGE value="added ROF and RROF capabilities" />
-    <option name="LAST_COMMIT_MESSAGE" value="added ROF and RROF capabilities" />
+    <MESSAGE value="added the capability to play series" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the capability to play series" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1664233160217">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="223" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816@0.0.1536.816" timestamp="1664233160217" />
-    <state x="424" y="2" key="CommitChangelistDialog2" timestamp="1664839636880">
+    <state x="424" y="2" key="CommitChangelistDialog2" timestamp="1664841160146">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="424" y="2" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1664839636880" />
-    <state width="1515" height="208" key="GridCell.Tab.0.bottom" timestamp="1664841086641">
+    <state x="424" y="2" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1664841160146" />
+    <state width="1515" height="208" key="GridCell.Tab.0.bottom" timestamp="1664841174751">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1664841086641" />
-    <state width="1515" height="208" key="GridCell.Tab.0.center" timestamp="1664841086641">
+    <state width="1515" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1664841174751" />
+    <state width="1515" height="208" key="GridCell.Tab.0.center" timestamp="1664841174751">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1664841086641" />
-    <state width="1515" height="208" key="GridCell.Tab.0.left" timestamp="1664841086641">
+    <state width="1515" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1664841174751" />
+    <state width="1515" height="208" key="GridCell.Tab.0.left" timestamp="1664841174751">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1664841086641" />
-    <state width="1515" height="208" key="GridCell.Tab.0.right" timestamp="1664841086641">
+    <state width="1515" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1664841174751" />
+    <state width="1515" height="208" key="GridCell.Tab.0.right" timestamp="1664841174751">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1664841086641" />
+    <state width="1515" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1664841174751" />
   </component>
 </project>
