@@ -6,6 +6,16 @@ class CupArray:
                           "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                           "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
                           "C1": False, "C2": False, "C3": False}
+        self.ROF_situation = {"A1": False, "A2": True, "A3": True, "A4": True, "A5": False,
+                              "A6": True, "A7": False, "A8": True, "A9": True, "A10": False,
+                              "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
+                              "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
+                              "C1": False, "C2": False, "C3": False}
+        self.RROF_situation = {"A1": True, "A2": False, "A3": False, "A4": False, "A5": True,
+                               "A6": False, "A7": True, "A8": False, "A9": False, "A10": True,
+                               "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
+                               "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
+                               "C1": False, "C2": False, "C3": False}
         self.ncups = 10
         self.reracked_to_this = True
 
@@ -123,12 +133,21 @@ class CupArray:
         if not self.situation[cup.upper()]:
             self.ncups += 1
             self.situation[cup.upper()] = True
+            self.reracked_to_this = True
             return cup
         return "Error"
 
     def makecup(self, cup):
         if cup not in self.situation.keys():
             return "Error"
+        if self.checkROF(cup):
+            self.ncups = 0
+            self.situation = {"A1": False, "A2": False, "A3": False, "A4": False, "A5": False,
+                              "A6": False, "A7": False, "A8": False, "A9": False, "A10": False,
+                              "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
+                              "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
+                              "C1": False, "C2": False, "C3": False}
+            return cup
         if self.situation[cup.upper()]:
             self.situation[cup.upper()] = False
             self.ncups -= 1
@@ -195,6 +214,25 @@ class CupArray:
         if askIsland == "y":
             return self.island()
         return "Make"
+
+    def checkROF(self, cup):
+        if cup != "A5":
+            return False
+        else:
+            ROF = True
+            RROF = True
+            for key in self.situation:
+                if self.situation[key] != self.ROF_situation[key]:
+                    ROF = False
+                if self.situation[key] != self.RROF_situation[key]:
+                    RROF = False
+            if ROF:
+                print("Ring of Fire!")
+                return True
+            if RROF:
+                print("Reverse Ring of Fire!")
+                return True
+        return False
 
     def overtime(self, count):
         self.reracked_to_this = True

@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CupArray.py" beforeDir="false" afterPath="$PROJECT_DIR$/CupArray.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PongGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/PongGame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamPlayer.py" beforeDir="false" afterPath="$PROJECT_DIR$/TeamPlayer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,38 +97,46 @@
       <option name="project" value="LOCAL" />
       <updated>1664472026913</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="everything works? needs playtesting but all should be good">
+      <created>1664838562310</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664838562310</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first update" />
     <MESSAGE value="some updates to mechanics, balls back and fire should work now" />
-    <option name="LAST_COMMIT_MESSAGE" value="some updates to mechanics, balls back and fire should work now" />
+    <MESSAGE value="everything works? needs playtesting but all should be good" />
+    <option name="LAST_COMMIT_MESSAGE" value="everything works? needs playtesting but all should be good" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1664233160217">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="223" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816@0.0.1536.816" timestamp="1664233160217" />
-    <state x="424" y="2" key="CommitChangelistDialog2" timestamp="1664472026268">
+    <state x="424" y="2" key="CommitChangelistDialog2" timestamp="1664838561281">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="424" y="2" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1664472026268" />
-    <state width="1515" height="208" key="GridCell.Tab.0.bottom" timestamp="1664837969922">
+    <state x="424" y="2" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1664838561281" />
+    <state width="1515" height="208" key="GridCell.Tab.0.bottom" timestamp="1664839452641">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1664837969922" />
-    <state width="1515" height="208" key="GridCell.Tab.0.center" timestamp="1664837969906">
+    <state width="1515" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1664839452641" />
+    <state width="1515" height="208" key="GridCell.Tab.0.center" timestamp="1664839452641">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1664837969906" />
-    <state width="1515" height="208" key="GridCell.Tab.0.left" timestamp="1664837969906">
+    <state width="1515" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1664839452641" />
+    <state width="1515" height="208" key="GridCell.Tab.0.left" timestamp="1664839452641">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1664837969906" />
-    <state width="1515" height="208" key="GridCell.Tab.0.right" timestamp="1664837969906">
+    <state width="1515" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1664839452641" />
+    <state width="1515" height="208" key="GridCell.Tab.0.right" timestamp="1664839452641">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1664837969906" />
+    <state width="1515" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1664839452641" />
   </component>
 </project>

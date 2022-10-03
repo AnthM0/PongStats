@@ -4,11 +4,11 @@ from TeamPlayer import Team, Player
 
 class PongGame:
     def __init__(self):
-        self.playerA1 = "ANTHONY"  # input("Enter first player's name on Team A: ").upper()
-        self.playerA2 = "ANTHONY"  # input("Enter second player's name on Team A (input same name for singles): ").upper()
+        self.playerA1 = input("Enter first player's name on Team A: ").upper()
+        self.playerA2 = input("Enter second player's name on Team A (input same name for singles): ").upper()
         self.teamA = Team(self.playerA1, self.playerA2)
-        self.playerB1 = "MARIA"  # input("Enter first player's name on Team B: ").upper()
-        self.playerB2 = "LUCY"  # input("Enter second player's name on Team B (input same name for singles): ").upper()
+        self.playerB1 = input("Enter first player's name on Team B: ").upper()
+        self.playerB2 = input("Enter second player's name on Team B (input same name for singles): ").upper()
         self.teamB = Team(self.playerB1, self.playerB2)
         self.overtimeCount = 0
 
@@ -21,7 +21,7 @@ class PongGame:
             if turn == "Team A":
                 # run Team A's turn
                 teamAturn = self.teamA.turn()
-                print(teamAturn)
+
                 # if Team A passes
                 if teamAturn == "Continue":
                     # if Team A was in redemption, the game is over, Team B wins
