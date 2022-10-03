@@ -7,6 +7,7 @@ class CupArray:
                           "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
                           "C1": False, "C2": False, "C3": False}
         self.ncups = 10
+        self.reracked_to_this = True
 
     def hash(self):
         returnString = ""
@@ -116,10 +117,22 @@ class CupArray:
         if self.situation["B10"]:
             print("    B10")
 
+    def addcup(self, cup):
+        if cup not in self.situation.keys():
+            return "Error"
+        if not self.situation[cup.upper()]:
+            self.ncups += 1
+            self.situation[cup.upper()] = True
+            return cup
+        return "Error"
+
     def makecup(self, cup):
+        if cup not in self.situation.keys():
+            return "Error"
         if self.situation[cup.upper()]:
             self.situation[cup.upper()] = False
             self.ncups -= 1
+            self.reracked_to_this = False
             return self.checkIsland(cup)
         else:
             return "Error"
@@ -134,7 +147,7 @@ class CupArray:
 
     def checkIsland(self, cup):
         if self.ncups <= 1:
-            return "Make"
+            return cup
         if cup == "A1" and (self.situation["A2"] or self.situation["A3"]):
             return "Make"
         if cup == "A2" and (self.situation["A1"] or self.situation["A3"] or self.situation["A4"] or self.situation["A5"]):
@@ -184,6 +197,7 @@ class CupArray:
         return "Make"
 
     def overtime(self, count):
+        self.reracked_to_this = True
         if count == 1:
             self.ncups = 4
             self.situation = {"A1": False, "A2": False, "A3": False, "A4": True, "A5": False,
@@ -198,7 +212,7 @@ class CupArray:
                               "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                               "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
                               "C1": False, "C2": True, "C3": True}
-        if count == 3:
+        if count >= 3:
             self.ncups = 9
             self.situation = {"A1": False, "A2": True, "A3": False, "A4": True, "A5": True,
                               "A6": False, "A7": True, "A8": True, "A9": True, "A10": False,
@@ -220,6 +234,7 @@ class CupArray:
                                   "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                                   "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             else:
                 return False
@@ -230,6 +245,7 @@ class CupArray:
                                   "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                                   "B6": True, "B7": True, "B8": True, "B9": True, "B10": True,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             else:
                 return False
@@ -240,6 +256,7 @@ class CupArray:
                                   "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                                   "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             else:
                 return False
@@ -250,6 +267,7 @@ class CupArray:
                                   "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                                   "B6": False, "B7": True, "B8": True, "B9": True, "B10": True,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             else:
                 return False
@@ -260,6 +278,7 @@ class CupArray:
                                   "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                                   "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             else:
                 return False
@@ -270,6 +289,7 @@ class CupArray:
                                   "B1": False, "B2": False, "B3": False, "B4": False, "B5": True,
                                   "B6": False, "B7": True, "B8": False, "B9": True, "B10": False,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             if self.ncups == 4:
                 self.situation = {"A1": False, "A2": False, "A3": False, "A4": False, "A5": False,
@@ -277,6 +297,7 @@ class CupArray:
                                   "B1": False, "B2": False, "B3": True, "B4": False, "B5": True,
                                   "B6": False, "B7": True, "B8": False, "B9": True, "B10": False,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             if self.ncups == 5:
                 self.situation = {"A1": False, "A2": False, "A3": False, "A4": False, "A5": False,
@@ -284,6 +305,7 @@ class CupArray:
                                   "B1": True, "B2": False, "B3": True, "B4": False, "B5": True,
                                   "B6": False, "B7": True, "B8": False, "B9": True, "B10": False,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             else:
                 return False
@@ -294,6 +316,7 @@ class CupArray:
                                   "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                                   "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             else:
                 return False
@@ -304,6 +327,7 @@ class CupArray:
                                   "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                                   "B6": False, "B7": True, "B8": True, "B9": True, "B10": False,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             else:
                 return False
@@ -314,6 +338,7 @@ class CupArray:
                                   "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                                   "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             else:
                 return False
@@ -324,6 +349,7 @@ class CupArray:
                                   "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                                   "B6": False, "B7": True, "B8": False, "B9": True, "B10": False,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             else:
                 return False
@@ -334,6 +360,7 @@ class CupArray:
                                   "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                                   "B6": False, "B7": False, "B8": False, "B9": True, "B10": False,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             else:
                 return False
