@@ -7,18 +7,73 @@ class PongGame:
         self.playerA1 = input("Enter first player's name on Team A: ").upper()
         self.playerA2 = input("Enter second player's name on Team A (input same name for singles): ").upper()
         self.teamA = Team(self.playerA1, self.playerA2)
+        self.teamA_wins = 0
         self.playerB1 = input("Enter first player's name on Team B: ").upper()
         self.playerB2 = input("Enter second player's name on Team B (input same name for singles): ").upper()
         self.teamB = Team(self.playerB1, self.playerB2)
         self.overtimeCount = 0
+        self.teamB_wins = 0
 
-    def playGame(self):
+    def playSeries(self, first_turn="IDK"):
+        result = 0
+        while True:
+            print("\n\n\nEntering Game", self.teamA_wins+self.teamB_wins+1)
+            print(self.playerA1, end=" ")
+            if self.playerA1 != self.playerA2:
+                print("and", self.playerA2, end=" ")
+            print("with", self.teamA_wins, "wins", end="\n")
+            print(self.playerB1, end=" ")
+            if self.playerB1 != self.playerB2:
+                print("and", self.playerB2, end=" ")
+            print("with", self.teamB_wins, "wins", end="\n\n")
+
+            result = self.playGame(first_turn)
+
+            if result == 1:
+                self.teamA_wins += 1
+                first_turn = "Team A"
+            elif result == -1:
+                self.teamB_wins += 1
+                first_turn = "Team B"
+
+            another_game = input("Another Game? ").lower()
+            if (another_game == "n") or (another_game == "no"):
+                print("\n\n\nSeries over in", self.teamA_wins + self.teamB_wins, "games")
+                print(self.playerA1, end=" ")
+                if self.playerA1 != self.playerA2:
+                    print("and", self.playerA2, end=" ")
+                print("with", self.teamA_wins, "wins", end="\n\n")
+                print(self.playerB1, end=" ")
+                if self.playerB1 != self.playerB2:
+                    print("and", self.playerB2, end=" ")
+                print("with", self.teamB_wins, "wins", end="\n\n")
+
+    def playGame(self, first_turn="IDK"):
+        self.teamA = Team(self.playerA1, self.playerA2)
+        self.teamB = Team(self.playerB1, self.playerB2)
+        self.overtimeCount = 0
         teamAturn = "Continue"
         teamBturn = "Continue"
-        turn = "Team A"
+        turn = first_turn
+        while (turn != "Team A") and (turn != "Team B"):
+            inputstring = "Who starts? Team A (" + self.playerA1
+            if self.playerA1 != self.playerA2:
+                inputstring += " and" + self.playerA2
+            inputstring += ") or Team B (" + self.playerB1
+            if self.playerB1 != self.playerB2:
+                inputstring += " and " + self.playerB2
+            inputstring += ")? "
+            turn = input(inputstring)
+
         while (turn == "Team A") or (turn == "Team B"):
+            print()
             # if it is Team A's turn
             if turn == "Team A":
+                print(self.playerA1, end="")
+                if self.playerA1 != self.playerA2:
+                    print(" and", self.playerA2, end="")
+                print("\'s Turn")
+
                 # run Team A's turn
                 teamAturn = self.teamA.turn()
 
@@ -27,6 +82,7 @@ class PongGame:
                     # if Team A was in redemption, the game is over, Team B wins
                     if teamBturn == "Rack Clear":
                         turn = "Team B Wins!"
+                        return -1
                     # otherwise, it is Team B's turn
                     else:
                         turn = "Team B"
@@ -56,9 +112,15 @@ class PongGame:
                     # otherwise, game over, Team A wins
                     else:
                         turn = "Team A Wins!"
+                        return 1
 
             # if it is Team B's turn
             if turn == "Team B":
+                print(self.playerB1, end="")
+                if self.playerB1 != self.playerB2:
+                    print(" and", self.playerB2, end="")
+                print("\'s Turn")
+
                 # run Team B's turn
                 teamBturn = self.teamB.turn()
 
@@ -67,6 +129,7 @@ class PongGame:
                     # if Team B was in redemption, the game is over, Team A wins
                     if teamAturn == "Rack Clear":
                         turn = "Team A Wins!"
+                        return 1
                     # otherwise, it is Team A's turn
                     else:
                         turn = "Team A"
@@ -96,8 +159,8 @@ class PongGame:
                     # otherwise, game over, Team A wins
                     else:
                         turn = "Team B Wins!"
+                        return -1
 
-        print(turn)
 
 
 
