@@ -15,8 +15,8 @@ class PongGame:
         self.teamB_wins = 0
 
     def playSeries(self, first_turn="IDK"):
-        result = 0
-        while True:
+        result = 1
+        while (result == 1) or (result == -1):
             print("\n\n\nEntering Game", self.teamA_wins+self.teamB_wins+1)
             print(self.playerA1, end=" ")
             if self.playerA1 != self.playerA2:
@@ -47,7 +47,7 @@ class PongGame:
                 if self.playerB1 != self.playerB2:
                     print("and", self.playerB2, end=" ")
                 print("with", self.teamB_wins, "wins", end="\n\n")
-                break
+                result = 0
 
     def playGame(self, first_turn="IDK"):
         self.teamA = Team(self.playerA1, self.playerA2)
