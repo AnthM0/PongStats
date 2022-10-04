@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9981da64-511c-4ddf-83c7-1beaf6aea168" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/GameLog.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Log.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Log.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PongGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/PongGame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShotLog.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ShotLog.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TeamPlayer.py" beforeDir="false" afterPath="$PROJECT_DIR$/TeamPlayer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -146,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664846516088</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Outputs to CSV File">
+      <created>1664849194893</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664849194893</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -160,7 +168,8 @@
     <MESSAGE value="added the capability to play series" />
     <MESSAGE value="needs playtesting" />
     <MESSAGE value="looks good, full capability, needs playtesting&#10;&#10;also, needs to write output to csv file instead of printing it.&#10;could also add back options to most menus." />
-    <option name="LAST_COMMIT_MESSAGE" value="looks good, full capability, needs playtesting&#10;&#10;also, needs to write output to csv file instead of printing it.&#10;could also add back options to most menus." />
+    <MESSAGE value="Outputs to CSV File" />
+    <option name="LAST_COMMIT_MESSAGE" value="Outputs to CSV File" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1664233160217">
@@ -171,25 +180,25 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="542" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.816@0.0.1536.816" timestamp="1664846464091" />
-    <state x="424" y="0" key="CommitChangelistDialog2" timestamp="1664846514924">
+    <state x="424" y="0" key="CommitChangelistDialog2" timestamp="1664849193628">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="424" y="0" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1664846514924" />
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1664848812353">
+    <state x="424" y="0" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1664849193628" />
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1664850390745">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1664848812353" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1664848812353">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1664850390745" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1664850390745">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1664848812353" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1664848812353">
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1664850390745" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1664850390745">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1664848812353" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1664848812353">
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1664850390745" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1664850390745">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1664848812353" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1664850390745" />
   </component>
 </project>

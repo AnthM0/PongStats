@@ -13,13 +13,13 @@ class Team:
     # bool overtime
     # int nturn
 
-    def __init__(self, player1, player2, gamenumber):
-        self.player1 = Player(player1, player2, gamenumber)
+    def __init__(self, player1, player2, gamenumber, on_record):
+        self.player1 = Player(player1, player2, gamenumber, on_record)
         if player1 == player2:
             self.player2 = self.player1
             self.nplayers = 1
         else:
-            self.player2 = Player(player2, player1, gamenumber)
+            self.player2 = Player(player2, player1, gamenumber, on_record)
             self.nplayers = 2
         self.rack = CupArray()
         self.ballsbackP1 = 0
@@ -191,8 +191,9 @@ class Team:
 
 
 class Player:
-    def __init__(self, name, teammate, gamenumber):
+    def __init__(self, name, teammate, gamenumber, on_record):
         self.name = name
+        self.on_record = on_record
         self.teammate = teammate
         self.streak = 0
         self.shots = 0
@@ -234,13 +235,16 @@ class Player:
 
         # store the log of the shot
         shot_hash = [">>>", self.name, cup, self.streak, island]
-        for i in old_shot_hash:
-            shot_hash.append(i)
-        with open('ShotLog.csv', 'a', newline='') as csvfile:
-            reader = csv.writer(csvfile, delimiter=',',
-                                quotechar='|', quoting=csv.QUOTE_MINIMAL)
-            reader.writerow(shot_hash)
-        print("Logged:", shot_hash)
+        if self.on_record:
+            for i in old_shot_hash:
+                shot_hash.append(i)
+            with open('ShotLog.csv', 'a', newline='') as csvfile:
+                reader = csv.writer(csvfile, delimiter=',',
+                                    quotechar='|', quoting=csv.QUOTE_MINIMAL)
+                reader.writerow(shot_hash)
+            print("Logged:", shot_hash)
+        else:
+            print("Did NOT log:", shot_hash)
 
         # update the player's streak
         self.streak = new_streak

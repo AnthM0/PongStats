@@ -3,7 +3,8 @@ import csv
 
 
 class PongGame:
-    def __init__(self):
+    def __init__(self, on_record=True):
+        self.on_record = on_record
         self.playerA1 = input("Enter first player's name on Team A: ").upper()
         self.playerA2 = input("Enter second player's name on Team A (input same name for singles): ").upper()
         self.teamA_wins = 0
@@ -20,8 +21,8 @@ class PongGame:
                     comma_index -= 1
                 last_game = int(row[0][(comma_index + 1):])
         self.game_number = last_game
-        self.teamA = Team(self.playerA1, self.playerA2, self.game_number)
-        self.teamB = Team(self.playerB1, self.playerB2, self.game_number)
+        self.teamA = Team(self.playerA1, self.playerA2, self.game_number, self.on_record)
+        self.teamB = Team(self.playerB1, self.playerB2, self.game_number, self.on_record)
 
     def playSeries(self, first_turn="IDK"):
         result = 1
@@ -31,14 +32,19 @@ class PongGame:
             print(self.playerA1, end=" ")
             if self.playerA1 != self.playerA2:
                 print("and", self.playerA2, end=" ")
-            print("with", self.teamA_wins, "wins", end="\n")
+            if (self.teamA_wins == 0) or (self.teamA_wins > 1):
+                print("with", self.teamA_wins, "wins")
+            else:
+                print("with", self.teamA_wins, "win")
             print(self.playerB1, end=" ")
             if self.playerB1 != self.playerB2:
                 print("and", self.playerB2, end=" ")
-            print("with", self.teamB_wins, "wins", end="\n\n")
+            if (self.teamB_wins == 0) or (self.teamB_wins > 1):
+                print("with", self.teamB_wins, "wins")
+            else:
+                print("with", self.teamB_wins, "win")
 
             result = self.playGame(first_turn)
-
             if result == 1:
                 self.teamA_wins += 1
                 first_turn = "Team A"
@@ -46,30 +52,51 @@ class PongGame:
                 self.teamB_wins += 1
                 first_turn = "Team B"
 
+            game_hash = [result, self.playerA1, self.playerA2, self.teamA.rack.hash(), self.playerB1, self.playerB2,
+                         self.teamB.rack.hash(), self.overtimeCount, self.teamA_wins+self.teamB_wins, self.teamA_wins,
+                         self.teamB_wins]
+            if self.on_record:
+                with open('GameLog.csv', 'a', newline='') as csvfile:
+                    reader = csv.writer(csvfile, delimiter=',',
+                                        quotechar='|', quoting=csv.QUOTE_MINIMAL)
+                    reader.writerow(game_hash)
+                print("Logged:", game_hash)
+            else:
+                print("Did NOT log:", game_hash)
+
             another_game = input("Another Game? ").lower()
             if (another_game == "n") or (another_game == "no"):
-                print("\n\n\nSeries over in", self.teamA_wins + self.teamB_wins, "games")
+                if (self.teamA_wins + self.teamB_wins) > 1:
+                    print("\n\n\nSeries over in", self.teamA_wins + self.teamB_wins, "games")
+                else:
+                    print("\n\n\nSeries over in", self.teamA_wins + self.teamB_wins, "game")
                 print(self.playerA1, end=" ")
                 if self.playerA1 != self.playerA2:
                     print("and", self.playerA2, end=" ")
-                print("with", self.teamA_wins, "wins")
+                if (self.teamA_wins == 0) or (self.teamA_wins > 1):
+                    print("with", self.teamA_wins, "wins")
+                else:
+                    print("with", self.teamA_wins, "win")
                 print(self.playerB1, end=" ")
                 if self.playerB1 != self.playerB2:
                     print("and", self.playerB2, end=" ")
-                print("with", self.teamB_wins, "wins", end="\n\n")
+                if (self.teamB_wins == 0) or (self.teamB_wins > 1):
+                    print("with", self.teamB_wins, "wins", end="\n\n")
+                else:
+                    print("with", self.teamB_wins, "win", end="\n\n")
                 result = 0
 
     def playGame(self, first_turn="IDK"):
-        self.teamA = Team(self.playerA1, self.playerA2, self.game_number)
-        self.teamB = Team(self.playerB1, self.playerB2, self.game_number)
+        self.teamA = Team(self.playerA1, self.playerA2, self.game_number, self.on_record)
+        self.teamB = Team(self.playerB1, self.playerB2, self.game_number, self.on_record)
         self.overtimeCount = 0
         teamAturn = "Continue"
         teamBturn = "Continue"
         turn = first_turn
         while (turn != "Team A") and (turn != "Team B"):
-            if turn.upper().contains(self.playerA1) or turn.upper().contains(self.playerA2):
+            if (self.playerA1 in turn.upper()) or (self.playerA2 in turn.upper()):
                 turn = "Team A"
-            elif turn.upper().contains(self.playerB1) or turn.upper().contains(self.playerB2):
+            elif (self.playerB1 in turn.upper()) or (self.playerB2 in turn.upper()):
                 turn = "Team B"
             else:
                 inputstring = "Who starts? Team A (" + self.playerA1
