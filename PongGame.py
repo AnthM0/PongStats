@@ -1,23 +1,33 @@
-from CupArray import CupArray
 from TeamPlayer import Team, Player
+import csv
 
 
 class PongGame:
     def __init__(self):
         self.playerA1 = input("Enter first player's name on Team A: ").upper()
         self.playerA2 = input("Enter second player's name on Team A (input same name for singles): ").upper()
-        self.teamA = Team(self.playerA1, self.playerA2)
         self.teamA_wins = 0
         self.playerB1 = input("Enter first player's name on Team B: ").upper()
         self.playerB2 = input("Enter second player's name on Team B (input same name for singles): ").upper()
-        self.teamB = Team(self.playerB1, self.playerB2)
         self.overtimeCount = 0
         self.teamB_wins = 0
+        with open('ShotLog.csv', newline='') as csvfile:
+            reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+            last_game = 0
+            for row in reader:
+                comma_index = -1
+                while row[0][comma_index] != ",":
+                    comma_index -= 1
+                last_game = int(row[0][(comma_index + 1):])
+        self.game_number = last_game
+        self.teamA = Team(self.playerA1, self.playerA2, self.game_number)
+        self.teamB = Team(self.playerB1, self.playerB2, self.game_number)
 
     def playSeries(self, first_turn="IDK"):
         result = 1
         while (result == 1) or (result == -1):
-            print("\n\n\nEntering Game", self.teamA_wins+self.teamB_wins+1)
+            self.game_number += 1
+            print("\n\n\nEntering Game", self.teamA_wins+self.teamB_wins+1, "(Number", self.game_number, "on record)")
             print(self.playerA1, end=" ")
             if self.playerA1 != self.playerA2:
                 print("and", self.playerA2, end=" ")
@@ -50,26 +60,31 @@ class PongGame:
                 result = 0
 
     def playGame(self, first_turn="IDK"):
-        self.teamA = Team(self.playerA1, self.playerA2)
-        self.teamB = Team(self.playerB1, self.playerB2)
+        self.teamA = Team(self.playerA1, self.playerA2, self.game_number)
+        self.teamB = Team(self.playerB1, self.playerB2, self.game_number)
         self.overtimeCount = 0
         teamAturn = "Continue"
         teamBturn = "Continue"
         turn = first_turn
         while (turn != "Team A") and (turn != "Team B"):
-            inputstring = "Who starts? Team A (" + self.playerA1
-            if self.playerA1 != self.playerA2:
-                inputstring += " and" + self.playerA2
-            inputstring += ") or Team B (" + self.playerB1
-            if self.playerB1 != self.playerB2:
-                inputstring += " and " + self.playerB2
-            inputstring += ")? "
-            turn = input(inputstring)
+            if turn.upper().contains(self.playerA1) or turn.upper().contains(self.playerA2):
+                turn = "Team A"
+            elif turn.upper().contains(self.playerB1) or turn.upper().contains(self.playerB2):
+                turn = "Team B"
+            else:
+                inputstring = "Who starts? Team A (" + self.playerA1
+                if self.playerA1 != self.playerA2:
+                    inputstring += " and" + self.playerA2
+                inputstring += ") or Team B (" + self.playerB1
+                if self.playerB1 != self.playerB2:
+                    inputstring += " and " + self.playerB2
+                inputstring += ")? "
+                turn = input(inputstring)
 
         while (turn == "Team A") or (turn == "Team B"):
             # if it is Team A's turn
             if turn == "Team A":
-                print("\n", self.playerA1, end="")
+                print("\n", self.playerA1, sep="", end="")
                 if self.playerA1 != self.playerA2:
                     print(" and", self.playerA2, end="")
                 print("\'s Turn")
@@ -116,7 +131,7 @@ class PongGame:
 
             # if it is Team B's turn
             if turn == "Team B":
-                print("\n", self.playerB1, end="")
+                print("\n", self.playerB1, sep="", end="")
                 if self.playerB1 != self.playerB2:
                     print(" and", self.playerB2, end="")
                 print("\'s Turn")
