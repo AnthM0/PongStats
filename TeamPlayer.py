@@ -42,11 +42,13 @@ class Team:
         self.rack.show()
 
         # if you have 2 cups or less, offer rerack (for gentleman's)
-        if self.rack.ncups <= 2:
+        if (self.rack.ncups == 2) and not(self.rack.situation["B7"] and self.rack.situation["B9"]):
+            self.rerack_avalible = True
+        if (self.rack.ncups == 1) and (not self.rack.situation["B9"]):
             self.rerack_avalible = True
 
         # if you have a rerack avalible,
-        if (self.rack.ncups < 7) and self.rerack_avalible and (not self.rack.reracked_to_this):
+        if (self.rack.ncups < 7) and self.rerack_avalible and (not self.rack.reracked_to_this) and (not self.redemption):
             rerack_result = False
             # ask if the player wants a rerack
             rerackrequest = input("Do you want a rerack (input name): ").lower()
@@ -71,6 +73,19 @@ class Team:
         ice = False
 
         while (self.player1.shots > 0) or (self.player2.shots > 0):
+            # if you are in redemption
+            if (self.rack.ncups <= 6) and self.redemption and \
+                    not ((self.rack.ncups == 2) and (self.rack.situation["B7"] and self.rack.situation["B9"])) and \
+                    not ((self.rack.ncups == 1) and (self.rack.situation["B9"])):
+                rerackrequest = input("Do you want a rerack (input name): ").lower()
+                if not ((rerackrequest == "no") or (rerackrequest == "n") or (rerackrequest == "")):
+                    rerack_result = self.rack.rerack(rerackrequest)
+                    while not rerack_result:
+                        rerackrequest = input("Do you want a rerack (input name): ").lower()
+                        if (rerackrequest == "no") or (rerackrequest == "n") or (rerackrequest == ""):
+                            break
+                        rerack_result = self.rack.rerack(rerackrequest)
+
             forballsback = False
 
             # if it is a single-player team
@@ -80,7 +95,10 @@ class Team:
                     forballsback = True
                     # if there is only one cup left, the player could ice the game
                     if self.rack.ncups == 1:
-                        print("Ice Opportunity...")
+                        if self.redemption:
+                            print("Start OT Opportunity...")
+                        else:
+                            print("Ice Opportunity...")
                         ice = True
                 # shooting result
                 result = self.player1.shot(self.rack, forballsback, ice, self.redemption, self.overtime, self.nturn)
@@ -98,7 +116,10 @@ class Team:
                     forballsback = True
                     # if there is only one cup left, the player could ice the game
                     if self.rack.ncups == 1:
-                        print("Ice Opportunity...")
+                        if self.redemption:
+                            print("Start OT Opportunity...")
+                        else:
+                            print("Ice Opportunity...")
                         ice = True
                 # shooting result
                 result = self.player1.shot(self.rack, forballsback, ice, self.redemption, self.overtime, self.nturn)
@@ -113,7 +134,10 @@ class Team:
                     forballsback = True
                     # if there is only one cup left, the player could ice the game
                     if self.rack.ncups == 1:
-                        print("Ice Opportunity...")
+                        if self.redemption:
+                            print("Start OT Opportunity...")
+                        else:
+                            print("Ice Opportunity...")
                         ice = True
                 # shooting result
                 result = self.player2.shot(self.rack, forballsback, ice, self.redemption, self.overtime, self.nturn)
@@ -134,7 +158,10 @@ class Team:
                         forballsback = True
                         # if there is only one cup left, the player could ice the game
                         if self.rack.ncups == 1:
-                            print("Ice Opportunity...")
+                            if self.redemption:
+                                print("Start OT Opportunity...")
+                            else:
+                                print("Ice Opportunity...")
                             ice = True
                     # shooting result
                     result = self.player1.shot(self.rack, forballsback, ice, self.redemption, self.overtime, self.nturn)
@@ -149,13 +176,19 @@ class Team:
                         forballsback = True
                         # if there is only one cup left, the player could ice the game
                         if self.rack.ncups == 1:
-                            print("Ice Opportunity...")
+                            if self.redemption:
+                                print("Start OT Opportunity...")
+                            else:
+                                print("Ice Opportunity...")
                             ice = True
                     # shooting result
                     result = self.player2.shot(self.rack, forballsback, ice, self.redemption, self.overtime, self.nturn)
                     # if Player 2 didn't miss, update the balls back tracker
                     if result != "Miss":
                         self.ballsbackP2 += 1
+
+            if (result[0] == "A") or (result[0] == "B"):
+                rack_clear = True
 
             # if the last cup is made...
             if (result[0] == "A") or (result[0] == "B") and (not self.redemption):
@@ -202,7 +235,7 @@ class Player:
     def shot(self, cup_array, forballsback, ice, redemption, overtime, turn):
         # Models a Player's shot.
         # Returns: "Make" if the player makes the cup (Even if it's an Island)
-        #          "Make - Rack Empty" if the player makes the last cup
+        #          "A#" or "B#" if the player makes the last cup
         #          "Miss" if the player does not make a cup
         self.shots -= 1
 
@@ -235,9 +268,9 @@ class Player:
 
         # store the log of the shot
         shot_hash = [">>>", self.name, cup, self.streak, island]
+        for i in old_shot_hash:
+            shot_hash.append(i)
         if self.on_record:
-            for i in old_shot_hash:
-                shot_hash.append(i)
             with open('ShotLog.csv', 'a', newline='') as csvfile:
                 reader = csv.writer(csvfile, delimiter=',',
                                     quotechar='|', quoting=csv.QUOTE_MINIMAL)

@@ -54,7 +54,7 @@ class PongGame:
 
             game_hash = [result, self.playerA1, self.playerA2, self.teamA.rack.hash(), self.playerB1, self.playerB2,
                          self.teamB.rack.hash(), self.overtimeCount, self.teamA_wins+self.teamB_wins, self.teamA_wins,
-                         self.teamB_wins]
+                         self.teamB_wins, self.game_number]
             if self.on_record:
                 with open('GameLog.csv', 'a', newline='') as csvfile:
                     reader = csv.writer(csvfile, delimiter=',',
@@ -99,9 +99,9 @@ class PongGame:
             elif (self.playerB1 in turn.upper()) or (self.playerB2 in turn.upper()):
                 turn = "Team B"
             else:
-                if (self.playerA1 in turn.upper()) or (self.playerA2 in turn.upper()):
+                if (self.playerA1[0] == turn[0].upper()) or (self.playerA2[0] == turn[0].upper()) and not (self.playerB1[0] == turn[0].upper()) or (self.playerB2[0] == turn[0].upper()):
                     turn = "Team A"
-                elif (self.playerB1 in turn.upper()) or (self.playerB2 in turn.upper()):
+                elif (self.playerB1[0] == turn[0].upper()) or (self.playerB2[0] == turn[0].upper()):
                     turn = "Team B"
                 else:
                     inputstring = "Who starts? Team A (" + self.playerA1

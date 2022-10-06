@@ -341,7 +341,7 @@ class CupArray:
                                   "C1": False, "C2": False, "C3": False}
                 self.reracked_to_this = True
                 return True
-            if self.ncups == 4:
+            elif self.ncups == 4:
                 self.situation = {"A1": False, "A2": False, "A3": False, "A4": False, "A5": False,
                                   "A6": False, "A7": False, "A8": False, "A9": False, "A10": False,
                                   "B1": False, "B2": False, "B3": True, "B4": False, "B5": True,
@@ -349,7 +349,7 @@ class CupArray:
                                   "C1": False, "C2": False, "C3": False}
                 self.reracked_to_this = True
                 return True
-            if self.ncups == 5:
+            elif self.ncups == 5:
                 self.situation = {"A1": False, "A2": False, "A3": False, "A4": False, "A5": False,
                                   "A6": False, "A7": False, "A8": False, "A9": False, "A10": False,
                                   "B1": True, "B2": False, "B3": True, "B4": False, "B5": True,
@@ -360,7 +360,15 @@ class CupArray:
             else:
                 return False
         if name.lower() == "triangle":
-            if self.ncups == 3:
+            if self.ncups == 6:
+                self.situation = {"A1": False, "A2": True, "A3": False, "A4": True, "A5": True,
+                                  "A6": False, "A7": True, "A8": True, "A9": True, "A10": False,
+                                  "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
+                                  "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
+                                  "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
+                return True
+            elif self.ncups == 3:
                 self.situation = {"A1": False, "A2": False, "A3": False, "A4": True, "A5": False,
                                   "A6": False, "A7": True, "A8": True, "A9": False, "A10": False,
                                   "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
