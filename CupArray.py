@@ -125,7 +125,7 @@ class CupArray:
             else:
                 print()
         if self.situation["B10"]:
-            print("    B10")
+            print("B10")
 
     def addcup(self, cup):
         if cup not in self.situation.keys():
@@ -265,6 +265,18 @@ class CupArray:
             name = "chain gang"
         if name.lower() == "gentlemans":
             name = "gentleman's"
+        if name.lower() == "gentlemens":
+            name = "gentleman's"
+        if name.lower() == "gentlemen's":
+            name = "gentleman's"
+        if name.lower() == "gents":
+            name = "gentleman's"
+        if name.lower() == "gent's":
+            name = "gentleman's"
+        if name.lower() == "back":
+            name = "back cup"
+        if name.lower() == "gas pedal":
+            name = "back cup"
         if name.lower() == "three-two-one":
             if self.ncups == 6:
                 self.situation = {"A1": False, "A2": True, "A3": False, "A4": True, "A5": True,

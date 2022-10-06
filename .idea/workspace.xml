@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9981da64-511c-4ddf-83c7-1beaf6aea168" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CupArray.py" beforeDir="false" afterPath="$PROJECT_DIR$/CupArray.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameLog.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GameLog.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PongGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/PongGame.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShotLog.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ShotLog.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -158,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664850838146</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Clears Data">
+      <created>1664850986400</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1664850986400</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -174,7 +184,8 @@
     <MESSAGE value="looks good, full capability, needs playtesting&#10;&#10;also, needs to write output to csv file instead of printing it.&#10;could also add back options to most menus." />
     <MESSAGE value="Outputs to CSV File" />
     <MESSAGE value="Adds a Game Log file&#10;&#10;Fixes Pluralization on announcements&#10;&#10;Allows player names instead of team names for inputting which team goes first" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds a Game Log file&#10;&#10;Fixes Pluralization on announcements&#10;&#10;Allows player names instead of team names for inputting which team goes first" />
+    <MESSAGE value="Clears Data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clears Data" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1664233160217">
@@ -185,25 +196,29 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="542" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.816@0.0.1536.816" timestamp="1664846464091" />
-    <state x="424" y="0" key="CommitChangelistDialog2" timestamp="1664850837028">
+    <state x="424" y="0" key="CommitChangelistDialog2" timestamp="1664850985223">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="424" y="0" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1664850837028" />
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1664850839991">
+    <state x="424" y="0" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1664850985223" />
+    <state width="1515" height="372" key="GridCell.Tab.0.bottom" timestamp="1665025525081">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1664850839991" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1664850839991">
+    <state width="1515" height="372" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1665025525081" />
+    <state width="1515" height="372" key="GridCell.Tab.0.center" timestamp="1665025525080">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1664850839991" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1664850839991">
+    <state width="1515" height="372" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1665025525080" />
+    <state width="1515" height="372" key="GridCell.Tab.0.left" timestamp="1665025525080">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1664850839991" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1664850839991">
+    <state width="1515" height="372" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1665025525080" />
+    <state width="1515" height="372" key="GridCell.Tab.0.right" timestamp="1665025525081">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1664850839991" />
+    <state width="1515" height="372" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1665025525081" />
+    <state x="578" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1665028201121">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="578" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.816@0.0.1536.816" timestamp="1665028201121" />
   </component>
 </project>

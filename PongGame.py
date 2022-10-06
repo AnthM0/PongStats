@@ -99,14 +99,19 @@ class PongGame:
             elif (self.playerB1 in turn.upper()) or (self.playerB2 in turn.upper()):
                 turn = "Team B"
             else:
-                inputstring = "Who starts? Team A (" + self.playerA1
-                if self.playerA1 != self.playerA2:
-                    inputstring += " and" + self.playerA2
-                inputstring += ") or Team B (" + self.playerB1
-                if self.playerB1 != self.playerB2:
-                    inputstring += " and " + self.playerB2
-                inputstring += ")? "
-                turn = input(inputstring)
+                if (self.playerA1 in turn.upper()) or (self.playerA2 in turn.upper()):
+                    turn = "Team A"
+                elif (self.playerB1 in turn.upper()) or (self.playerB2 in turn.upper()):
+                    turn = "Team B"
+                else:
+                    inputstring = "Who starts? Team A (" + self.playerA1
+                    if self.playerA1 != self.playerA2:
+                        inputstring += " and" + self.playerA2
+                    inputstring += ") or Team B (" + self.playerB1
+                    if self.playerB1 != self.playerB2:
+                        inputstring += " and " + self.playerB2
+                    inputstring += ")? "
+                    turn = input(inputstring)
 
         while (turn == "Team A") or (turn == "Team B"):
             # if it is Team A's turn
