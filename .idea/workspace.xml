@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9981da64-511c-4ddf-83c7-1beaf6aea168" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CupArray.py" beforeDir="false" afterPath="$PROJECT_DIR$/CupArray.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameLog.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GameLog.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PongGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/PongGame.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TeamPlayer.py" beforeDir="false" afterPath="$PROJECT_DIR$/TeamPlayer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -176,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665028215427</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fixed bugs to game endings and reracks">
+      <created>1665030961578</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1665030961578</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -194,7 +197,8 @@
     <MESSAGE value="Adds a Game Log file&#10;&#10;Fixes Pluralization on announcements&#10;&#10;Allows player names instead of team names for inputting which team goes first" />
     <MESSAGE value="Clears Data" />
     <MESSAGE value="First Stats" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Stats" />
+    <MESSAGE value="Fixed bugs to game endings and reracks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bugs to game endings and reracks" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1664233160217">
@@ -205,26 +209,26 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="542" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.816@0.0.1536.816" timestamp="1664846464091" />
-    <state x="424" y="0" key="CommitChangelistDialog2" timestamp="1665028214808">
+    <state x="424" y="0" key="CommitChangelistDialog2" timestamp="1665030960165">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="424" y="0" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1665028214808" />
-    <state width="1515" height="170" key="GridCell.Tab.0.bottom" timestamp="1665030717338">
+    <state x="424" y="0" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1665030960165" />
+    <state width="1515" height="552" key="GridCell.Tab.0.bottom" timestamp="1665705224109">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="170" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1665030717338" />
-    <state width="1515" height="170" key="GridCell.Tab.0.center" timestamp="1665030717337">
+    <state width="1515" height="552" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1665705224109" />
+    <state width="1515" height="552" key="GridCell.Tab.0.center" timestamp="1665705224109">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="170" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1665030717337" />
-    <state width="1515" height="170" key="GridCell.Tab.0.left" timestamp="1665030717337">
+    <state width="1515" height="552" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1665705224109" />
+    <state width="1515" height="552" key="GridCell.Tab.0.left" timestamp="1665705224109">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="170" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1665030717337" />
-    <state width="1515" height="170" key="GridCell.Tab.0.right" timestamp="1665030717338">
+    <state width="1515" height="552" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1665705224109" />
+    <state width="1515" height="552" key="GridCell.Tab.0.right" timestamp="1665705224109">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="170" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1665030717338" />
+    <state width="1515" height="552" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1665705224109" />
     <state x="578" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1665028201121">
       <screen x="0" y="0" width="1536" height="816" />
     </state>

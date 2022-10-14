@@ -85,7 +85,8 @@ class Team:
                         if (rerackrequest == "no") or (rerackrequest == "n") or (rerackrequest == ""):
                             break
                         rerack_result = self.rack.rerack(rerackrequest)
-
+                    if rerack_result:
+                        self.rack.show()
             forballsback = False
 
             # if it is a single-player team
