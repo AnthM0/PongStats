@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9981da64-511c-4ddf-83c7-1beaf6aea168" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Processing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamPlayer.py" beforeDir="false" afterPath="$PROJECT_DIR$/TeamPlayer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameLog.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GameLog.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShotLog.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ShotLog.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,11 +36,35 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\antmo\PycharmProjects\PongTracker" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\antmo\PycharmProjects\PongTracker" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.GameManager">
+    <configuration name="GameManager" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PongTracker" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GameManager.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="PongArray" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PongTracker" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -59,8 +86,53 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Processing (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PongTracker" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Processing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Processing" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PongTracker" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\antmo\PycharmProjects\PongTracker\Processing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.GameManager" />
+        <item itemvalue="Python.Processing (1)" />
+        <item itemvalue="Python.Processing" />
         <item itemvalue="Python.PongArray" />
       </list>
     </recent_temporary>
@@ -179,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665030961578</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="New stats">
+      <created>1665705983956</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1665705983956</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -198,7 +277,8 @@
     <MESSAGE value="Clears Data" />
     <MESSAGE value="First Stats" />
     <MESSAGE value="Fixed bugs to game endings and reracks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bugs to game endings and reracks" />
+    <MESSAGE value="New stats" />
+    <option name="LAST_COMMIT_MESSAGE" value="New stats" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1664233160217">
@@ -209,26 +289,26 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="542" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.816@0.0.1536.816" timestamp="1664846464091" />
-    <state x="424" y="0" key="CommitChangelistDialog2" timestamp="1665030960165">
+    <state x="424" y="0" key="CommitChangelistDialog2" timestamp="1665705982563">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="424" y="0" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1665030960165" />
-    <state width="1515" height="552" key="GridCell.Tab.0.bottom" timestamp="1665705224109">
+    <state x="424" y="0" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1665705982563" />
+    <state width="1515" height="338" key="GridCell.Tab.0.bottom" timestamp="1665710595948">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="552" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1665705224109" />
-    <state width="1515" height="552" key="GridCell.Tab.0.center" timestamp="1665705224109">
+    <state width="1515" height="338" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1665710595948" />
+    <state width="1515" height="338" key="GridCell.Tab.0.center" timestamp="1665710595948">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="552" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1665705224109" />
-    <state width="1515" height="552" key="GridCell.Tab.0.left" timestamp="1665705224109">
+    <state width="1515" height="338" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1665710595948" />
+    <state width="1515" height="338" key="GridCell.Tab.0.left" timestamp="1665710595948">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="552" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1665705224109" />
-    <state width="1515" height="552" key="GridCell.Tab.0.right" timestamp="1665705224109">
+    <state width="1515" height="338" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1665710595948" />
+    <state width="1515" height="338" key="GridCell.Tab.0.right" timestamp="1665710595948">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="552" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1665705224109" />
+    <state width="1515" height="338" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1665710595948" />
     <state x="578" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1665028201121">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
