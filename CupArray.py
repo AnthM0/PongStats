@@ -6,7 +6,18 @@ class CupArray:
                           "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                           "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
                           "C1": False, "C2": False, "C3": False}
+        self.ROF_situation = {"A1": False, "A2": True, "A3": True, "A4": True, "A5": False,
+                              "A6": True, "A7": False, "A8": True, "A9": True, "A10": False,
+                              "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
+                              "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
+                              "C1": False, "C2": False, "C3": False}
+        self.RROF_situation = {"A1": True, "A2": False, "A3": False, "A4": False, "A5": True,
+                               "A6": False, "A7": True, "A8": False, "A9": False, "A10": True,
+                               "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
+                               "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
+                               "C1": False, "C2": False, "C3": False}
         self.ncups = 10
+        self.reracked_to_this = True
 
     def hash(self):
         returnString = ""
@@ -114,12 +125,33 @@ class CupArray:
             else:
                 print()
         if self.situation["B10"]:
-            print("    B10")
+            print("B10")
+
+    def addcup(self, cup):
+        if cup not in self.situation.keys():
+            return "Error"
+        if not self.situation[cup.upper()]:
+            self.ncups += 1
+            self.situation[cup.upper()] = True
+            self.reracked_to_this = True
+            return cup
+        return "Error"
 
     def makecup(self, cup):
+        if cup not in self.situation.keys():
+            return "Error"
+        if self.checkROF(cup):
+            self.ncups = 0
+            self.situation = {"A1": False, "A2": False, "A3": False, "A4": False, "A5": False,
+                              "A6": False, "A7": False, "A8": False, "A9": False, "A10": False,
+                              "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
+                              "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
+                              "C1": False, "C2": False, "C3": False}
+            return cup
         if self.situation[cup.upper()]:
             self.situation[cup.upper()] = False
             self.ncups -= 1
+            self.reracked_to_this = False
             return self.checkIsland(cup)
         else:
             return "Error"
@@ -134,7 +166,7 @@ class CupArray:
 
     def checkIsland(self, cup):
         if self.ncups <= 1:
-            return "Make"
+            return cup
         if cup == "A1" and (self.situation["A2"] or self.situation["A3"]):
             return "Make"
         if cup == "A2" and (self.situation["A1"] or self.situation["A3"] or self.situation["A4"] or self.situation["A5"]):
@@ -183,7 +215,27 @@ class CupArray:
             return self.island()
         return "Make"
 
+    def checkROF(self, cup):
+        if cup != "A5":
+            return False
+        else:
+            ROF = True
+            RROF = True
+            for key in self.situation:
+                if self.situation[key] != self.ROF_situation[key]:
+                    ROF = False
+                if self.situation[key] != self.RROF_situation[key]:
+                    RROF = False
+            if ROF:
+                print("Ring of Fire!")
+                return True
+            if RROF:
+                print("Reverse Ring of Fire!")
+                return True
+        return False
+
     def overtime(self, count):
+        self.reracked_to_this = True
         if count == 1:
             self.ncups = 4
             self.situation = {"A1": False, "A2": False, "A3": False, "A4": True, "A5": False,
@@ -198,7 +250,7 @@ class CupArray:
                               "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                               "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
                               "C1": False, "C2": True, "C3": True}
-        if count == 3:
+        if count >= 3:
             self.ncups = 9
             self.situation = {"A1": False, "A2": True, "A3": False, "A4": True, "A5": True,
                               "A6": False, "A7": True, "A8": True, "A9": True, "A10": False,
@@ -213,6 +265,18 @@ class CupArray:
             name = "chain gang"
         if name.lower() == "gentlemans":
             name = "gentleman's"
+        if name.lower() == "gentlemens":
+            name = "gentleman's"
+        if name.lower() == "gentlemen's":
+            name = "gentleman's"
+        if name.lower() == "gents":
+            name = "gentleman's"
+        if name.lower() == "gent's":
+            name = "gentleman's"
+        if name.lower() == "back":
+            name = "back cup"
+        if name.lower() == "gas pedal":
+            name = "back cup"
         if name.lower() == "three-two-one":
             if self.ncups == 6:
                 self.situation = {"A1": False, "A2": True, "A3": False, "A4": True, "A5": True,
@@ -220,6 +284,7 @@ class CupArray:
                                   "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                                   "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             else:
                 return False
@@ -230,6 +295,7 @@ class CupArray:
                                   "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                                   "B6": True, "B7": True, "B8": True, "B9": True, "B10": True,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             else:
                 return False
@@ -240,6 +306,7 @@ class CupArray:
                                   "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                                   "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             else:
                 return False
@@ -250,6 +317,7 @@ class CupArray:
                                   "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                                   "B6": False, "B7": True, "B8": True, "B9": True, "B10": True,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             else:
                 return False
@@ -260,6 +328,7 @@ class CupArray:
                                   "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                                   "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             else:
                 return False
@@ -270,30 +339,42 @@ class CupArray:
                                   "B1": False, "B2": False, "B3": False, "B4": False, "B5": True,
                                   "B6": False, "B7": True, "B8": False, "B9": True, "B10": False,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
-            if self.ncups == 4:
+            elif self.ncups == 4:
                 self.situation = {"A1": False, "A2": False, "A3": False, "A4": False, "A5": False,
                                   "A6": False, "A7": False, "A8": False, "A9": False, "A10": False,
                                   "B1": False, "B2": False, "B3": True, "B4": False, "B5": True,
                                   "B6": False, "B7": True, "B8": False, "B9": True, "B10": False,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
-            if self.ncups == 5:
+            elif self.ncups == 5:
                 self.situation = {"A1": False, "A2": False, "A3": False, "A4": False, "A5": False,
                                   "A6": False, "A7": False, "A8": False, "A9": False, "A10": False,
                                   "B1": True, "B2": False, "B3": True, "B4": False, "B5": True,
                                   "B6": False, "B7": True, "B8": False, "B9": True, "B10": False,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             else:
                 return False
         if name.lower() == "triangle":
-            if self.ncups == 3:
+            if self.ncups == 6:
+                self.situation = {"A1": False, "A2": True, "A3": False, "A4": True, "A5": True,
+                                  "A6": False, "A7": True, "A8": True, "A9": True, "A10": False,
+                                  "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
+                                  "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
+                                  "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
+                return True
+            elif self.ncups == 3:
                 self.situation = {"A1": False, "A2": False, "A3": False, "A4": True, "A5": False,
                                   "A6": False, "A7": True, "A8": True, "A9": False, "A10": False,
                                   "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                                   "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             else:
                 return False
@@ -304,6 +385,7 @@ class CupArray:
                                   "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                                   "B6": False, "B7": True, "B8": True, "B9": True, "B10": False,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             else:
                 return False
@@ -314,6 +396,7 @@ class CupArray:
                                   "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                                   "B6": False, "B7": False, "B8": False, "B9": False, "B10": False,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             else:
                 return False
@@ -324,6 +407,18 @@ class CupArray:
                                   "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
                                   "B6": False, "B7": True, "B8": False, "B9": True, "B10": False,
                                   "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
+                return True
+            else:
+                return False
+        if name.lower() == "back cup":
+            if self.ncups == 1:
+                self.situation = {"A1": False, "A2": False, "A3": False, "A4": False, "A5": False,
+                                  "A6": False, "A7": False, "A8": False, "A9": False, "A10": False,
+                                  "B1": False, "B2": False, "B3": False, "B4": False, "B5": False,
+                                  "B6": False, "B7": False, "B8": False, "B9": True, "B10": False,
+                                  "C1": False, "C2": False, "C3": False}
+                self.reracked_to_this = True
                 return True
             else:
                 return False

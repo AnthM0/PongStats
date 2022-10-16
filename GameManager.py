@@ -1,7 +1,7 @@
 from PongGame import PongGame
 
 myGame = PongGame()
-myGame.playGame()
+myGame.playSeries()
 
 
 

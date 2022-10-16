@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9981da64-511c-4ddf-83c7-1beaf6aea168" name="Default Changelist" comment="" />
+    <list default="true" id="9981da64-511c-4ddf-83c7-1beaf6aea168" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Processing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameLog.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GameLog.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShotLog.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ShotLog.csv" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +20,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="2FK4nL8LnJRtUvIZmhTSLM3fW6t" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,8 +32,39 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\antmo\PycharmProjects\PongTracker" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\antmo\PycharmProjects\PongTracker" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.GameManager">
+    <configuration name="GameManager" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PongTracker" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GameManager.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="PongArray" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PongTracker" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -36,7 +77,49 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PongArray.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\antmo\PycharmProjects\PongTracker\GameManager.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Processing (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PongTracker" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Processing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Processing" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PongTracker" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\antmo\PycharmProjects\PongTracker\Processing.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -47,6 +130,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.GameManager" />
+        <item itemvalue="Python.Processing (1)" />
+        <item itemvalue="Python.Processing" />
         <item itemvalue="Python.PongArray" />
       </list>
     </recent_temporary>
@@ -74,28 +160,158 @@
       <option name="presentableId" value="Default" />
       <updated>1664227607384</updated>
     </task>
+    <task id="LOCAL-00001" summary="first update">
+      <created>1664309490644</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664309490644</updated>
+    </task>
+    <task id="LOCAL-00002" summary="some updates to mechanics, balls back and fire should work now">
+      <created>1664472026913</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664472026913</updated>
+    </task>
+    <task id="LOCAL-00003" summary="everything works? needs playtesting but all should be good">
+      <created>1664838562310</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664838562310</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added ROF and RROF capabilities">
+      <created>1664839637485</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664839637485</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added the capability to play series">
+      <created>1664841160613</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664841160613</updated>
+    </task>
+    <task id="LOCAL-00006" summary="needs playtesting">
+      <created>1664841467984</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664841467984</updated>
+    </task>
+    <task id="LOCAL-00007" summary="looks good, full capability, needs playtesting&#10;&#10;also, needs to write output to csv file instead of printing it.&#10;could also add back options to most menus.">
+      <created>1664841676014</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664841676014</updated>
+    </task>
+    <task id="LOCAL-00008" summary="looks good, full capability, needs playtesting&#10;&#10;also, needs to write output to csv file instead of printing it.&#10;could also add back options to most menus.">
+      <created>1664846516088</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1664846516088</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Outputs to CSV File">
+      <created>1664849194893</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664849194893</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Adds a Game Log file&#10;&#10;Fixes Pluralization on announcements&#10;&#10;Allows player names instead of team names for inputting which team goes first">
+      <created>1664850838146</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1664850838146</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Clears Data">
+      <created>1664850986400</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1664850986400</updated>
+    </task>
+    <task id="LOCAL-00012" summary="First Stats">
+      <created>1665028215427</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1665028215427</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Fixed bugs to game endings and reracks">
+      <created>1665030961578</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1665030961578</updated>
+    </task>
+    <task id="LOCAL-00014" summary="New stats">
+      <created>1665705983956</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1665705983956</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first update" />
+    <MESSAGE value="some updates to mechanics, balls back and fire should work now" />
+    <MESSAGE value="everything works? needs playtesting but all should be good" />
+    <MESSAGE value="added ROF and RROF capabilities" />
+    <MESSAGE value="added the capability to play series" />
+    <MESSAGE value="needs playtesting" />
+    <MESSAGE value="looks good, full capability, needs playtesting&#10;&#10;also, needs to write output to csv file instead of printing it.&#10;could also add back options to most menus." />
+    <MESSAGE value="Outputs to CSV File" />
+    <MESSAGE value="Adds a Game Log file&#10;&#10;Fixes Pluralization on announcements&#10;&#10;Allows player names instead of team names for inputting which team goes first" />
+    <MESSAGE value="Clears Data" />
+    <MESSAGE value="First Stats" />
+    <MESSAGE value="Fixed bugs to game endings and reracks" />
+    <MESSAGE value="New stats" />
+    <option name="LAST_COMMIT_MESSAGE" value="New stats" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1664233160217">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="223" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816@0.0.1536.816" timestamp="1664233160217" />
-    <state width="1515" height="208" key="GridCell.Tab.0.bottom" timestamp="1664289903958">
+    <state x="542" y="211" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1664846464091">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1664289903958" />
-    <state width="1515" height="208" key="GridCell.Tab.0.center" timestamp="1664289903957">
+    <state x="542" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.816@0.0.1536.816" timestamp="1664846464091" />
+    <state x="424" y="0" key="CommitChangelistDialog2" timestamp="1665705982563">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1664289903957" />
-    <state width="1515" height="208" key="GridCell.Tab.0.left" timestamp="1664289903957">
+    <state x="424" y="0" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1665705982563" />
+    <state width="1515" height="338" key="GridCell.Tab.0.bottom" timestamp="1665710595948">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1664289903957" />
-    <state width="1515" height="208" key="GridCell.Tab.0.right" timestamp="1664289903957">
+    <state width="1515" height="338" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1665710595948" />
+    <state width="1515" height="338" key="GridCell.Tab.0.center" timestamp="1665710595948">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1664289903957" />
+    <state width="1515" height="338" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1665710595948" />
+    <state width="1515" height="338" key="GridCell.Tab.0.left" timestamp="1665710595948">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1515" height="338" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1665710595948" />
+    <state width="1515" height="338" key="GridCell.Tab.0.right" timestamp="1665710595948">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1515" height="338" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1665710595948" />
+    <state x="578" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1665028201121">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="578" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.816@0.0.1536.816" timestamp="1665028201121" />
   </component>
 </project>
